@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSC - Mandya | Registration</title>
+    <meta
+      name="description"
+      content="Minimal Form Interface: Simplistic, single input view form"
+    />
+    <meta
+      name="keywords"
+      content="form, minimal, interface, single input, big form, responsive form, transition"
+    />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="codrops-header">
+        <h1>
+          Developer Students Club <span>Powered by Google Developers</span>
+        </h1>
+        <img src="./DSC_badge.png" alt="" />
+        <p>
+          Developer Student Clubs train thousands of student developers globally
+          and work with their communities to solve real-life problems. Google
+          collaborates with university students who are passionate about growing
+          developer communities and supports them with starting student clubs on
+          their campuses. Check out our
+          <a href="https://developers.google.com/programs/dsc/">website</a> to
+          learn more.
+        </p>
+      </header>
+
+      <section>
+        <div class="section-header">
+          <p class="second_para">
+            Hi,my name is Himanshu Ranjan and I am a 3rd year CSE student. This
+            year i have been selected as the representative for DSC in PES
+            College of Engineering, Mandya . My job is to form the club with
+            keen students who are willing to give time and passion to the
+            program and to use the technologies available to them in order to
+            gain industrial skills and at the same time solve problems by
+            providing technology based solutions to the local as well as global
+            community. We plan to make the most of the opportunities provided to
+            us in order to grow as a developer and a problem solver which in the
+            long run helps us as an individual and also contribute towards the
+            society. Having said that, we would love for you to join us.
+          </p>
+        </div>
+        <div id="two">
+          <div class="content">
+            83% of the DSC Leads in India shared that they acquired a job or
+            internship due to their experience in DSC.
+          </div>
+        </div>
+        <form id="theForm" class="simform" autocomplete="off">
+          <div class="simform-inner">
+            <span class="personal_info"
+              >Please provide us with some personal information to help us
+              understand you better.</span
+            >
+            <ol class="questions">
+              <li>
+                <span><label for="q1">What's your name?</label></span>
+                <input id="q1" name="name" type="text" />
+              </li>
+              <li>
+                <span><label for="q2">In which year are you ? </label></span>
+                <input id="q2" name="year" type="text" />
+              </li>
+              <li>
+                <span><label for="q3">Your phone number</label></span>
+                <input id="q3" name="phoneNumber" type="text" />
+              </li>
+              <li>
+                <span><label for="q4">Your email address ? </label></span>
+                <input id="q4" name="email" type="text" />
+              </li>
+              <li>
+                <span
+                  ><label for="q5">Why do you want to join DSC ? </label></span
+                >
+                <input id="q5" name="reasonToJoin" type="text" />
+              </li>
+              <li>
+                <span
+                  ><label for="q6"
+                    >What are your hobbies? (be frank)</label
+                  ></span
+                >
+                <input id="q6" name="hobbies" type="text" />
+              </li>
+              <li>
+                <span
+                  ><label for="q7"
+                    >Do you have prior coding experience ? (Yes | No)</label
+                  ></span
+                >
+                <input id="q7" name="previousExp" type="text" />
+              </li>
+              <li>
+                <span
+                  ><label for="q8"
+                    >Would you say you are good in photography or videography?
+                    (Yes | No)</label
+                  ></span
+                >
+                <input id="q8" name="photoOrVideo" type="text" />
+              </li>
+              <li>
+                <span
+                  ><label for="q9"
+                    >Would you say you are good in digital marketing? (Yes |
+                    No)</label
+                  ></span
+                >
+                <input id="q9" name="digitalM" type="text" />
+              </li>
+            </ol>
+            <!-- /questions -->
+            <button class="submit" type="submit">Send answers</button>
+            <div class="controls">
+              <button class="next"></button>
+              <div class="progress"></div>
+              <span class="number">
+                <span class="number-current"></span>
+                <span class="number-total"></span>
+              </span>
+              <span class="error-message"></span>
+            </div>
+            <!-- / controls -->
+          </div>
+          <!-- /simform-inner -->
+          <span class="final-message"></span>
+          <span class="final-message ps"></span>
+        </form>
+        <!-- /simform -->
+      </section>
+    </div>
+    <!-- /container -->
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/firebase.js"></script>
+    <script>
+      var theForm = document.getElementById("theForm");
+
+      new stepsForm(theForm, {
+        onSubmit: function(form) {
+          // hide form
+          classie.addClass(theForm.querySelector(".simform-inner"), "hide");
+
+          /*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+          // let's just simulate something...
+          document.querySelector("#q8").blur();
+          var messageEl = theForm.querySelector(".final-message");
+          messageEl.innerHTML =
+            "Thank you! Click <a href='https://chat.whatsapp.com/HuyvdMz0mPB5qNiijNQNno' target='_blank' >here </a> to join our whatsapp group. Contact 8660482071 if you are having trouble joining the group.";
+          classie.addClass(messageEl, "show");
+        }
+      });
+    </script>
+  </body>
+</html>
