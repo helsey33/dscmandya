@@ -6,7 +6,7 @@ input.forEach(el => {
     const name = e.target.name,
       value = e.target.value;
     userData[name] = value;
-    if (e.target.name === "digitalM") {
+    if (e.target.name === "techInterest") {
       fetch("https://dscmandya-ed9ad.firebaseio.com/candidates.json", {
         method: "POST",
         headers: {
