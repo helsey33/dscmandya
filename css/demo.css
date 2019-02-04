@@ -93,7 +93,7 @@ a:focus {
 }
 
 section {
-  padding: 3em 0em 10em;
+  padding: 3em 0em 3em;
   background: #fff;
   text-align: center;
 }
@@ -134,6 +134,12 @@ section {
   }
   .personal_info {
     font-size: 15px;
+  }
+  #image {
+    padding: 0;
+  }
+  #image img {
+    width: 100%;
   }
 }
 
