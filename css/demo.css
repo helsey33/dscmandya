@@ -115,7 +115,8 @@ a:focus {
   .info {
     grid-template-columns: 1fr;
     overflow: hidden;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
+    padding: 1rem;
   }
   .info__header {
     font-size: 1.5rem;
@@ -132,7 +133,7 @@ a:focus {
 
   .right img {
     width: 100%;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   .ml_info {
@@ -142,16 +143,8 @@ a:focus {
   section {
     padding: 0 0.5rem;
   }
-}
 
-@media screen and (max-width: 25em) {
-  .codrops-header {
-    font-size: 0.8em;
-  }
-  section.related {
-    font-size: 1.2em;
-  }
-  .codrops-icon span {
-    display: none;
+  #theForm {
+    margin-bottom: 4rem;
   }
 }
