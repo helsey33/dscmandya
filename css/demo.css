@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap");
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 100%;
+  line-height: 1.25;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#header .banner {
+  width: 100%;
+}
+
+.personal_info {
+  color: #4185f4;
+  font-size: 1.5rem;
+}
+
+.info {
+  margin: 0 2rem;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.info__header {
+  margin: 1rem 0;
+  color: #2b2b2b;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.info__para {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.info__register {
+  margin: 2rem 0;
+  background: #4185f4;
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.ml_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 50vh;
+  margin: 2rem;
+}
+
+.ml_info .left {
+  background: url("../image/p3.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.ml_info .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ml_info_head {
+  margin: 1rem 0;
+  color: #2b2b2b;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.ml_info_sub {
+  font-size: 1.5rem;
+}
+
+.ml_info li {
+  margin: 0.2rem 0;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 44.75em) {
+  .info {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    margin: 0 1.5rem;
+  }
+  .info__header {
+    font-size: 1.5rem;
+  }
+
+  .info__para {
+    font-size: 1rem;
+  }
+
+  .info__register {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .right img {
+    width: 100%;
+    transform: scale(1.2);
+  }
+
+  .ml_info {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .codrops-header {
+    font-size: 0.8em;
+  }
+  section.related {
+    font-size: 1.2em;
+  }
+  .codrops-icon span {
+    display: none;
+  }
+}

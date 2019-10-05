@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSC - Mandya | Registration</title>
+    <meta
+      name="description"
+      content="The Official page for DSC Mandya Registration."
+    />
+    <meta
+      name="keywords"
+      content="form, minimal, interface, single input, big form, responsive form, transition,DSC,Mandya"
+    />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <img class="banner" src="./image/p1.png" alt="" />
+        <div class="info">
+          <div class="left">
+            <div class="info__header">#GCPCrashCourse</div>
+            <div class="info__para">
+              Developer Student Clubs brings you <i>#GCPCrashCourse</i> for the
+              month of October. Get a chance to learn the newest trends on cloud
+              and get yourself one step closer to industry readiness. Get hands
+              on cloud labs for free provided by Google and unlimited
+              subscription for the entire Month to complete the labs at your own
+              pace. Join us on <b>12th October</b> for an introductory session
+              in <b>CRC seminar hall</b>.
+            </div>
+            <a href="#theForm">
+              <div class="info__register">Register</div>
+            </a>
+          </div>
+          <div class="right">
+            <img src="./image/p2.png" alt="" />
+          </div>
+        </div>
+        <div class="ml_info">
+          <div class="left"></div>
+          <div class="right">
+            <div class="ml_info_head">Machine Learning</div>
+            <div class="ml_info_sub">Quests part of the track</div>
+            <ol>
+              <li>Baseline: Data, ML, AI</li>
+              <li>
+                Intro to ML: Language Processing / Intro to ML: Image Processing
+              </li>
+              <li>BigQuery for Machine Learning</li>
+              <li>Intermediate ML: TensorFlow on GCP</li>
+              <li>Machine Learning APIs</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section>
+        <form id="theForm" class="simform" autocomplete="off">
+          <div class="simform-inner">
+            <span class="personal_info">Registration Form</span>
+            <ol class="questions">
+              <li>
+                <span><label for="q1">What's your name?</label></span>
+                <input id="q1" name="name" type="text" />
+              </li>
+              <li>
+                <span><label for="q2">In which year are you ? </label></span>
+                <input id="q2" name="year" type="text" />
+              </li>
+              <li>
+                <span><label for="q3">Your phone number</label></span>
+                <input id="q3" name="phoneNumber" type="text" />
+              </li>
+              <li>
+                <span><label for="q4">Your email address ? </label></span>
+                <input id="q4" name="email" type="text" />
+              </li>
+            </ol>
+            <!-- /questions -->
+            <button class="submit" type="submit">Send answers</button>
+            <div class="controls">
+              <button class="next"></button>
+              <div class="progress"></div>
+              <span class="number">
+                <span class="number-current"></span>
+                <span class="number-total"></span>
+              </span>
+              <span class="error-message"></span>
+            </div>
+            <!-- / controls -->
+          </div>
+          <!-- /simform-inner -->
+          <span class="final-message"></span>
+          <span class="final-message ps"></span>
+        </form>
+        <!-- /simform -->
+      </section>
+    </div>
+    <!-- /container -->
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/firebase.js"></script>
+    <script>
+      var theForm = document.getElementById("theForm");
+
+      new stepsForm(theForm, {
+        onSubmit: function(form) {
+          // hide form
+          classie.addClass(theForm.querySelector(".simform-inner"), "hide");
+
+          /*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+          // let's just simulate something...
+          document.querySelector("#q4").blur();
+          var messageEl = theForm.querySelector(".final-message");
+          messageEl.innerHTML =
+            "Thank you! Click <a href='https://chat.whatsapp.com/HuyvdMz0mPB5qNiijNQNno' target='_blank' >here </a> to join our whatsapp group. Contact 8660482071 if you are having trouble joining the group.";
+          classie.addClass(messageEl, "show");
+        }
+      });
+    </script>
+  </body>
+</html>
