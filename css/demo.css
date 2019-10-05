@@ -138,6 +138,7 @@ a:focus {
 
   .ml_info {
     grid-template-columns: 1fr;
+    margin-bottom: 2rem;
   }
 
   section {
